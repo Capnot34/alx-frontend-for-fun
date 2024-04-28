@@ -1,0 +1,8 @@
+/* This Sass file generates styles for classes .col-1 to .col-4, setting the width to different percentages. */
+
+@for $H from 1 through 4 {
+  .col-#{$H} {
+    width: percentage(1 / $H);
+  }
+}
+
