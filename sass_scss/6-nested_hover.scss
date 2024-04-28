@@ -2,14 +2,10 @@
    Initially, the text color of the button is set to #FF0000.
    On hovering over the button, the text color changes to #00FF00. */
 
-$color: #ff0000;
-$hover: #00ff00;
-
 button {
-  color: $color;
+  color: #FF0000;
 
   &:hover {
-    color: $hover;
+    color: #00FF00;
   }
 }
-
