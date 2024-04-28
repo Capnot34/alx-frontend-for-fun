@@ -3,9 +3,9 @@
    On hovering over the button, the text color changes to #00FF00. */
 
 button {
-  color: #FF0000;
+	color: #ff0000;
 
-  &:hover {
-    color: #00FF00;
-  }
+	&:hover {
+		color: #00ff00;
+	}
 }
