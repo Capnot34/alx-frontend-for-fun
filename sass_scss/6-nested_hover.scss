@@ -1,0 +1,12 @@
+/* This Sass file uses nested declarations to set styles for button tags.
+   Initially, the text color of the button is set to #FF0000.
+   On hovering over the button, the text color changes to #00FF00. */
+
+button {
+  color: #ff0000;
+
+  $:hover {
+    color: #00ff00;
+  }
+}
+
