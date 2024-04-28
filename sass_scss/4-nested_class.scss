@@ -1,0 +1,13 @@
+/* Assigning color variables to colors to elements that are nested */
+
+$b-color: #3d3d3d;
+$r-color: #ff0000;
+
+body {
+  color: $b-color;
+
+  .red {
+    color: $r-color;
+  }
+}
+
