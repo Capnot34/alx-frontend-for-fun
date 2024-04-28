@@ -1,0 +1,7 @@
+/* This Sass file generates styles for heading tags from h1 to h5, setting the font-size in pixels to match the heading level. */
+
+@for $H from 1 through 5 {
+  h#{$H} {
+    font-size: #{$H}px;
+  }
+}
