@@ -1,10 +1,14 @@
+/*
+    This Sass file defines a color variable and applies it to the body and paragraph text.
+    The $color variable is set to #3d3d3d, a dark gray color.
+    This color is then used to set the text color for the body and paragraph (p) elements.
+*/
 $color: #3d3d3d;
 
 body {
-  color: $colo;
+    color: $color;
 }
 
 p {
-  color: $color;
+    color: $color;
 }
-
