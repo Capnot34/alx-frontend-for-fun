@@ -1,0 +1,13 @@
+/* This Sass file uses nested declarations to set font sizes for body, h1 tags inside body, and h1 tags of class .smaller inside body. */
+
+body {
+  font-size: 14px;
+
+  h1 {
+    font-size: 16px;
+
+    &.smaller {
+      font-size: 12px;
+    }
+  }
+}
