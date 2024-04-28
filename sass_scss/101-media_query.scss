@@ -1,0 +1,9 @@
+/* This Sass file assigns a font size of 20px to h1 tags and changes the font size to 14px when the screen width is smaller than 320px. */
+
+h1 {
+  font-size: 20px;
+
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+  }
+}
