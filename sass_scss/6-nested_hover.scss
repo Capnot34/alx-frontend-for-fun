@@ -1,10 +1,11 @@
-/* Nested hover
-change button color on hover */
+/* This Sass file uses nested declarations to set styles for button tags.
+   Initially, the text color of the button is set to #FF0000.
+   On hovering over the button, the text color changes to #00FF00. */
 
 button {
-    color: #FF0000;
+  color: #FF0000;
 
-    &:hover {
-        color: #00FF00;
-    }
+  &:hover {
+    color: #00FF00;
+  }
 }
