@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.toggle-cb {
+  display: none;
+}
+
+.toggle-inner {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #c4c4c4;
+  border-radius: 3.125rem;
+  cursor: pointer;
+}
+
+.toggle-label {
+  position: relative;
+  height: 3.125rem;
+  width: 8.75rem;
+}
+
+.toggle-switch {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 50%;
+  left: -10%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #c4c4c4;
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner {
+  background-color: #ebebeb;
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-inner::before {
+  content: "No";
+  color: #878585;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  background-color: #e1013c;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+  content: "Yes";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  left: 70%;
+}
+
