@@ -1,4 +1,4 @@
-/* A Sass file that assigns font size of 12px to all tags of class .info and a text color of #00FF00 to all tags of class .success and extend the style of the class .info and also add the text color #FF0000 to all tags of class .warning extending the style of the class .info  */
+/* This Sass file assigns font size of 12px to all tags of class .info and a text color of #00FF00 to all tags of class .success and extend the style of the class .info and also add the text color #FF0000 to all tags of class .warning extending the style of the class .info  */
 
 %info {
   font-size: 12px;
@@ -13,4 +13,3 @@
   @extend %info;
   color: #ff0000;
 }
-
