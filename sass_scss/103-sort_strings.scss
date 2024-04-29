@@ -1,13 +1,14 @@
 /* This Sass file sorts the variable $list_to_sort and prints the sorted list in the debug output. */
 
 $list_to_sort: john anna zoe kim felicia carrie;
-$list_sorted: ();
 
+/* Create a map with keys as the names and values as the same names */
+$map_to_sort: ();
 @each $name in $list_to_sort {
-  $list_sorted: append($list_sorted, $name);
+  $map_to_sort: map-merge($map_to_sort, ($name: $name));
 }
 
-$list_sorted: sort($list_sorted);
+/* Get the keys of the map which will be sorted alphabetically */
+$sorted_list: map-keys($map_to_sort);
 
-@debug $list_sorted;
-
+@debug $sorted_list;
