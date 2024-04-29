@@ -1,14 +1,39 @@
-/* This Sass file sorts the variable $list_to_sort and prints the sorted list in the debug output. */
-
 $list_to_sort: john anna zoe kim felicia carrie;
 
-/* Create a map with keys as the names and values as the same names */
-$map_to_sort: ();
-@each $name in $list_to_sort {
-  $map_to_sort: map-merge($map_to_sort, ($name: $name));
+@function sort-list($list) {
+  // Base case: Empty list or single element
+  @if ($list == null or length($list) == 1) {
+    @return $list;
+  }
+
+  // Divide and conquer approach
+  $pivot: nth($list, ceil(length($list) / 2));
+  $left: sort-list(extract($list, 1, length($list) div 2));
+  $right: sort-list(extract($list, (length($list) div 2) + 1, length($list)));
+
+  // Merge sorted sublists
+  @return join(sort-list(merge($left, $pivot)), sort-list($right));
 }
 
-/* Get the keys of the map which will be sorted alphabetically */
-$sorted_list: map-keys($map_to_sort);
+@function merge($list1, $list2) {
+  // Base case: At least one list is empty
+  @if ($list1 == null) {
+    @return $list2;
+  }
+  @if ($list2 == null) {
+    @return $list1;
+  }
 
-@debug $sorted_list;
+  // Compare head elements and recursively merge
+  $head1: nth($list1, 1);
+  $head2: nth($list2, 1);
+  @if ($head1 < $head2) {
+    @return join($head1, merge(extract($list1, 2), $list2));
+  } else {
+    @return join($head2, merge($list1, extract($list2, 2)));
+  }
+}
+
+// Usage: Print sorted list using debug information
+debug("Sorted list: " + sort-list($list_to_sort));
+
